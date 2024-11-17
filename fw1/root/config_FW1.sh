@@ -38,3 +38,9 @@ iptables -A FORWARD -s 172.32.5.0/24 -j DROP
 iptables -A FORWARD -j LOG --log-prefix "firewall 1"
 iptables -A FORWARD -j DROP
 
+# NAT Rules ======================================================
+
+iptables -t nat -A PREROUTING -d 172.32.4.100 -p tcp --dport 22 -j DNAT --to-destination 172.31.6.6
+iptables -t nat -A PREROUTING -d 172.32.4.100 -p tcp --dport 25 -j DNAT --to-destination 172.31.6.5
+iptables -t nat -A PREROUTING -d 172.32.4.100 -p tcp --dport 993 -j DNAT --to-destination 172.31.6.5
+
