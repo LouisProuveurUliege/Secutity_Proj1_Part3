@@ -1,0 +1,18 @@
+set realname = "deskteam"
+
+# IMAP
+set spoolfile = imap://10.10.1.5/INBOX
+set imap_user = "deskteam"
+set imap_pass = "deskteam"
+
+# SMTP
+set smtp_url = "smtp://10.10.1.5:25/"
+set from = "deskteam@mdga.com"
+set use_envelope_from = yes
+set ssl_starttls = no
+
+#
+mailboxes !
+
+set edit_hdrs
+auto_view text/html

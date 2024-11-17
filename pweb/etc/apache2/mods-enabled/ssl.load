@@ -1,0 +1,2 @@
+LoadModule ssl_module /usr/lib/apache2/modules/mod_ssl.so
+LoadModule socache_shmcb_module /usr/lib/apache2/modules/mod_socache_shmcb.so

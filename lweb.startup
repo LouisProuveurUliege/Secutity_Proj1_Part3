@@ -1,0 +1,13 @@
+ip link set eth0 up
+ip address add 10.10.2.2/24 dev eth0
+
+ip route add default via 10.10.2.1
+
+echo "Starting HTTP server"
+/etc/init.d/apache2 start
+
+useradd -m webteam -s /bin/false
+echo "webteam:webteam" | chpasswd
+echo /bin/false >> /etc/shells
+
+/etc/init.d/proftpd start

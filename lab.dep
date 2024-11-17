@@ -1,0 +1,5 @@
+dhcp_r1: dhcp
+dhcp_r2: dhcp
+u1: dhcp_r1
+u2: dhcp_r2
+honeypot: drive

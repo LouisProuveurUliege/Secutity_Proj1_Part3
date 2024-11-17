@@ -1,0 +1,2 @@
+SERVERS="10.10.1.2"
+INTERFACES="eth0"

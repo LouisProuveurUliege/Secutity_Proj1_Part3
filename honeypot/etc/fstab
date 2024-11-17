@@ -1,0 +1,2 @@
+# UNCONFIGURED FSTAB FOR BASE SYSTEM
+10.10.3.2/sambashare /mnt/share cifs username=donald,password=donald,soft 0 0

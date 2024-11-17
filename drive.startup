@@ -1,0 +1,11 @@
+ip link set eth0 up
+ip address add 10.10.3.2/24 dev eth0
+
+ip route add default via 10.10.3.1
+
+useradd donald
+echo -e "donald\ndonald" | smbpasswd -a donald
+useradd vlad
+echo -e "vlad\nvlad" | smbpasswd -a vlad
+
+/etc/init.d/smbd start
