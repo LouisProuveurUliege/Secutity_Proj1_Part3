@@ -1,7 +1,4 @@
 ###### Rules for FW2 ######
-#!/bin/bash
-
-# Firewall Configuration Script for FW2
 
 # Flush existing rules
 iptables -F
