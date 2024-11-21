@@ -1,5 +1,5 @@
 ###### Rules for FW3 ######
-
+-A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 # Incoming traffic z-drive
 iptables -A FORWARD -s 192.168.3.2 -d 10.10.3.2 -p tcp --dport 445 -j ACCEPT
 iptables -A FORWARD -s 192.168.3.3 -d 10.10.3.3 -p tcp --dport 873 -j ACCEPT
