@@ -1,8 +1,6 @@
 ###### Rules for FW2 ######
 
-# Flush existing rules
-iptables -F
-iptables -X
+-A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 
 # Incoming traffic z-lweb
 iptables -A FORWARD -s 192.168.1.0/24 -d 10.10.2.2 -p tcp --dport 21 -j ACCEPT
