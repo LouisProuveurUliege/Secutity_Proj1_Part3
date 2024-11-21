@@ -1,4 +1,5 @@
 ###### Rules for FW1 ######
+-A FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 
 # Incoming traffic z-mail-ssh
 iptables -A FORWARD -d 172.31.6.5 -p tcp --dport 993 -j ACCEPT
